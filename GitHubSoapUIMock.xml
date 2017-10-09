@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="d23a9b28-eeaa-4ffa-9201-d4454d97e871" activeEnvironment="Default" name="GitHubSoapUIMock" soapui-version="5.3.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="TestSuite" value="&lt;all>"/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="Save Project" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="TestCase" value="&lt;all>"/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="Endpoint" value=""/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:RestService" id="410ff768-5c82-437d-b2f4-e38a3829b9af" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://github.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://Palems-MacBook-Pro.local:8080/</con:endpoint><con:endpoint>http://github.com</con:endpoint></con:endpoints><con:resource name="SayHello" path="/hello/sayHello" id="b423a7c1-5ecd-4f6f-9adc-e137e4bfdc10"><con:settings/><con:parameters/><con:method name="SayHello 1" id="daa6c8c8-857e-43a7-9671-fda3f751b358" method="GET"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>500</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>500</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:say="http://Palems-MacBook-Pro.local/hello/sayHello">say:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:say="http://Palems-MacBook-Pro.local/hello/sayHello">say:Fault</con:element></con:representation><con:request name="Request 1" id="45391934-3258-4610-ba76-3db477fc9896" mediaType="application/json"><con:settings/><con:endpoint>http://github.com</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="906e9a6e-4023-46ad-9099-f2f2df1ed708" name="HelloHappyTestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="8da3327b-366d-4c13-9b2d-9144f5ed5b9d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="HelloHappyTestCase" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="HelloHappyTest" id="3dc74b61-6061-4b56-ba19-9e93bc45df69"><con:settings/><con:config service="http://github.com" resourcePath="/hello/sayHello" methodName="SayHello 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="HelloHappyTest" id="45391934-3258-4610-ba76-3db477fc9896" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="test_scenario" value="H001" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:8282/</con:endpoint><con:request/><con:originalUri>http://Palems-MacBook-Pro.local/hello/sayHello</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="8cc23370-b43e-42c9-8cd1-7ae2275be789" name="HelloUnhappyTestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="b5453567-7007-4b5c-8b2f-1996c288b457" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="HelloUnhappyTestCase" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="HelloUnhappyTest" id="9b0662e7-b837-4798-93d8-67d597918817"><con:settings/><con:config service="http://github.com" resourcePath="/hello/sayHello" methodName="SayHello 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="HelloUnhappyTest" id="45391934-3258-4610-ba76-3db477fc9896" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="test_scenario" value="N001" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:8282/</con:endpoint><con:request/><con:originalUri>http://Palems-MacBook-Pro.local/hello/sayHello</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:restMockService id="744db13d-c00d-46c7-bf38-6ef374dfc27b" port="8282" path="/" host="localhost" name="HelloMockService" docroot=""><con:settings/><con:properties/><con:restMockAction name="/hello/sayHello" method="GET" resourcePath="/hello/sayHello" id="1de7301f-edda-4865-8162-b2b052b4d229"><con:settings/><con:defaultResponse xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:dispatchStyle>SCRIPT</con:dispatchStyle><con:dispatchPath>def testScenario = mockRequest.getRequestHeaders().get("test_scenario")
+log.info "Test Scenario: " + testScenario
+
+if( testScenario.contains("H001") )
+{
+    return "H001-HelloResponse"
+}
+else if ( testScenario.contains("N001") )
+{
+    return "N001-Response"
+}
+
+</con:dispatchPath><con:response name="H001-HelloResponse" id="825c5abe-5c33-4669-91d4-47f16828c7cd" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{"message": "Hello world! Your JustAPIs instance is running correctly."}</con:responseContent></con:response><con:response name="N001-Response" id="d03050f7-aa9b-4d56-b02d-2444b6d9eb9f" httpResponseStatus="400" mediaType="application/json"><con:settings/><con:responseContent>{"message": "Bad Request."}</con:responseContent></con:response></con:restMockAction></con:restMockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
