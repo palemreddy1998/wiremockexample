@@ -13,3 +13,7 @@ curl --verbose -X post --data{"id":"Test001"} http://localhost:9999/__admin/
 
 # Run tests
 mvn clean test
+
+# Run with https port 
+java -jar wiremock-standalone-2.8.0.jar --https-port 9999
+https://localhost:9999/__admin/
